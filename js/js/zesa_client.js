@@ -1,6 +1,9 @@
 (function() {
   if (! window.Zeevex) {
-    window.Zeevex = {};
+    window.Zeevex = {
+      config: {},
+      internal: {}
+    };
   }
   var Zeevex = window.Zeevex;
 
