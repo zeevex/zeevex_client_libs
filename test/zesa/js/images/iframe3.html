@@ -1,0 +1,46 @@
+<html>
+<head>
+  <title>Auto-Submit Popup Test</title>
+</head>
+<body>
+
+<h1>Choose Your Payment Method</h1>
+
+<script type='text/javascript'>
+var child = null;
+
+function checkChild() {
+  if (! child) return;
+  
+  if (child.closed) {
+    div = document.getElementById("output");
+    div.innerHTML = "Payment completed or canceled!";
+  } else {
+    setTimeout(checkChild, 250);
+  }
+}
+
+function payWithZeevex() {
+  document.getElementById("output").innerHTML = "Waiting on transaction...";
+  child = window.open('iframe3popup.html', "zeevex", "width=570, height=500, location=yes");
+  
+  checkChild();
+}
+</script>
+
+<div style="margin-left: 100px;">
+<a href="#">
+<img src="images/other2.png" />
+</a>
+
+<a href="#" onclick="payWithZeevex()">
+<img src="images/zxbutton.png" />
+</a>
+</div>
+
+<p/>
+<div id="output">
+</div>
+
+</body>
+</html>

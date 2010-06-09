@@ -1,0 +1,31 @@
+<html>
+<head>
+  <title>IFRAME Test</title>
+</head>
+<body>
+<form action="http://localhost:4500/cgi-bin/webscr" id="purchaseform" method="post" name="purchaseform" style="width: 100%;">
+    
+        <input id="cmd" name="cmd" type="hidden" value="_xclick" />
+        <input id="iframe" name="iframe" type="hidden" value="1" />
+    
+    <input id="business" name="business" type="hidden" value="admin@zeevex.com" />
+    <input id="invoice" name="invoice" type="hidden" value="20100521-062949" />
+
+    <input id="return" name="return" type="hidden" value="http://localhost:4501/store/return" />
+    <input id="notify_url" name="notify_url" type="hidden" value="http://localhost:4501/backend/notification" />
+    <input id="cancel_return" name="cancel_return" type="hidden" value="http://localhost:4501/store/cancel" />
+
+    
+  <input id="item_name" name="item_name" type="hidden" value="Leather Purse containing Coins of the Realm, and Gum" />
+  <input id="item_number" name="item_number" type="hidden" value="itemsku23591" />
+  <input id="amount" name="amount" type="hidden" value="305999999999" />
+  <input id="quantity" name="quantity" type="hidden" value="1" />
+
+
+
+    <input id="currency_code" name="currency_code" type="hidden" value="ZXT" />
+    <input id="rm" name="rm" type="hidden" value="0" />
+    <input name="commit" style="align: right;" type="submit" value="Buy With Zeev Tokens" />
+</form>
+</body>
+</html>

@@ -1,0 +1,454 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0086)https://payment.allopass.com/buy/buy.apu?ids=199347&idd=782794&country=us&carousel=row -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><style>/* Themes */
+/* Setting the color and font is mandatory */
+.GleeThemeDefault{ 
+	background-color:#333 !important;
+	color:#fff !important;
+	font-family: Calibri, "Lucida Grande", Lucida, Arial, sans-serif !important;
+}
+
+.GleeThemeWhite{ 
+	background-color:#fff !important;
+	color:#000 !important;
+	border: 1px solid #939393 !important;
+	border-radius: 10px !important;
+	font-family: Calibri, "Lucida Grande", Lucida, Arial, sans-serif !important;
+}
+
+#gleeBox.GleeThemeWhite{
+	opacity:0.75;
+}
+
+#gleeSearchField.GleeThemeWhite{
+	border: 1px solid #939393 !important;
+}
+
+.GleeThemeRuby{
+	background-color: #530000 !important;
+	color: #f6b0ab !important;
+	font-family: "Lucida Grande", Lucida, Verdana, sans-serif !important;
+}
+
+.GleeThemeGreener{
+	background-color: #2e5c4f !important;
+	color: #d3ff5a !important;
+	font-family: Georgia, "Times New Roman", Times, serif !important;
+}
+
+.GleeThemeConsole{
+	font-family: Monaco, Consolas, "Courier New", Courier, mono !important;
+	color: #eafef6 !important;
+	background-color: #111 !important;
+}
+
+.GleeThemeGlee{ 
+	background-color: #eb1257 !important;
+	color: #fff300 !important;
+	-webkit-box-shadow: #eb1257 0px 0px 8px !important;
+	-moz-box-shadow: #eb1257 0px 0px 8px !important;
+	opacity: 0.8 !important;
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif !important;
+}</style><style>#gleeListManager{
+	line-height:20px;
+	left:25%;
+	display:none;
+	margin:0;
+	padding:2px !important;
+	top:15%;
+	overflow:auto;
+	position:fixed;
+	width:50%;
+	z-index:100000;
+	opacity:0.85;
+	height:400px;
+	font-size:15px;
+	border-radius:7px !important;
+}
+
+#gleeListSearchField{
+	line-height:20px !important;
+	margin:0 !important;
+	padding:5px !important;
+	border:none !important;
+	color:inherit !important;
+	outline:none !important;
+	font-size:inherit !important;
+	font-family:inherit !important;
+	background-color:inherit !important;
+	width:97% !important;
+}
+
+#gleeList{
+	padding:0 !important;
+	width:auto !important;
+	margin:0 !important;
+	font-size:inherit !important;
+	color:inherit !important;
+	text-align:left !important;
+	font-family:inherit !important;
+}
+
+#gleeListManager a.gleeListItem, a.gleeListItem:visited, a.gleeListItem:active, a.gleeListItem:hover{
+	margin:0px !important;
+	padding:5px;
+	border:none;
+	border-radius:2px !important;
+	color:inherit !important;
+	text-decoration:none !important;
+	font-family:inherit !important;
+	font-size:inherit !important;
+	float:left !important;
+	outline: none !important;
+	width:98% !important;
+	font-weight:inherit !important;
+	cursor:normal !important;
+}
+
+#gleeListManager a.gleeListItemHover.gleeListItem{
+	background-color: #ededed !important;
+	color: #454545 !important;
+	outline:none !important;
+}
+
+#gleeListManager.GleeThemeRuby a.gleeListItemHover.gleeListItem{
+	background-color: #e8c1cd !important;
+	color: #580d2b !important;
+}
+
+#gleeListManager.GleeThemeWhite a.gleeListItemHover.gleeListItem{
+	background-color: #c5c9d1 !important;
+	color: #1b1b1b !important;
+}
+
+#gleeListManager.GleeThemeGreener a.gleeListItemHover.gleeListItem{
+	background-color: #4ad051 !important;
+	color: #093b21 !important;
+}
+
+#gleeListManager.GleeThemeConsole a.gleeListItemHover.gleeListItem{
+	background-color:#005f81 !important;
+	color: #ffffff !important;
+}
+
+/* Styled scrollbars ;) */
+#gleeListManager::-webkit-scrollbar {
+	width: 13px;
+	height: 13px;
+}
+
+#gleeListManager::-webkit-scrollbar-button:start:decrement,
+#gleeListManager::-webkit-scrollbar-button:end:increment{
+	display:none;
+}
+
+#gleeListManager::-webkit-scrollbar-button:start:increment,
+#gleeListManager::-webkit-scrollbar-button:end:decrement {
+    display: none;
+}
+
+#gleeListManager::-webkit-scrollbar-button:vertical{
+}
+
+#gleeListManager::-webkit-scrollbar-button:start:decrement {
+}
+
+#gleeListManager::-webkit-scrollbar-button:end:increment {
+}
+
+#gleeListManager::-webkit-scrollbar-track-piece {
+	border-radius:7px;
+	background-color: #ededed;
+}
+
+#gleeListManager::-webkit-scrollbar-thumb:vertical {
+    height: 100px;
+	border-radius:7px;
+	background-color: #454545;
+}
+#gleeListManager::-webkit-scrollbar-corner:vertical, #gleeListManager::-webkit-scrollbar-resizer:vertical {
+    background-color: #ededed;
+}
+
+/* theme specific styling for scrollbar in list manager*/
+
+/* Greener */
+#gleeListManager.GleeThemeGreener::-webkit-scrollbar-track-piece {
+    background-color: #4ad051;
+}
+#gleeListManager.GleeThemeGreener::-webkit-scrollbar-thumb:vertical {
+    background-color: #093b21;
+}
+#gleeListManager.GleeThemeGreener::-webkit-scrollbar-corner:vertical, #gleeListManager.GleeThemeGreener::-webkit-scrollbar-resizer:vertical {
+    background-color: #4ad051;
+}
+
+/* Ruby */
+#gleeListManager.GleeThemeRuby::-webkit-scrollbar-track-piece {
+	background-color: #e8c1cd;
+}
+#gleeListManager.GleeThemeRuby::-webkit-scrollbar-thumb:vertical {
+    background-color: #580d2b;
+}
+#gleeListManager.GleeThemeRuby::-webkit-scrollbar-corner:vertical, #gleeListManager.GleeThemeRuby::-webkit-scrollbar-resizer:vertical {
+    background-color: #e8c1cd;
+}
+
+/* White */
+#gleeListManager.GleeThemeWhite::-webkit-scrollbar-track-piece {
+	background-color: #c5c9d1;
+}
+#gleeListManager.GleeThemeWhite::-webkit-scrollbar-thumb:vertical {
+    background-color: #1b1b1b;
+}
+#gleeListManager.GleeThemeWhite::-webkit-scrollbar-corner:vertical, #gleeListManager.GleeThemeWhite::-webkit-scrollbar-resizer:vertical {
+    background-color: #c5c9d1;
+}
+
+/* Console */
+#gleeListManager.GleeThemeConsole::-webkit-scrollbar-track-piece {
+	background-color: #005f81;
+	border:1px solid #333;
+}
+#gleeListManager.GleeThemeConsole::-webkit-scrollbar-thumb:vertical {
+    background-color: #ffffff;
+	border:1px solid #111;
+}
+#gleeListManager.GleeThemeConsole::-webkit-scrollbar-corner:vertical, #gleeListManager.GleeThemeConsole::-webkit-scrollbar-resizer:vertical {
+    background-color: #005f81;
+}
+/* end of theme-specific style for scrollbar */</style><style>.GleeReaped{
+	background-color: #fbee7e !important;
+	border: 1px dotted #818181 !important;
+} 
+.GleeHL{
+	background-color: #d7fe65 !important;
+	-webkit-box-shadow: rgb(177, 177, 177) 0px 0px 9px !important;
+	-moz-box-shadow: rgb(177, 177, 177) 0px 0px 9px !important;
+	padding: 3px !important;
+	color: #1c3249 !important;
+	border: 1px solid #818181 !important;
+}
+.GleeHL a{
+	color: #1c3249 !important;
+}
+
+#gleeBox{ 
+	line-height:20px;
+	height:auto !important;
+	z-index:100000;
+	position:fixed;
+	left:5%;
+	top:35%;
+	display:none;
+	overflow:auto;
+	width:90%;
+	background-color:#333;
+	opacity:0.65;
+	color:#fff;
+	margin:0;
+	font-family: Calibri, "Lucida Grande", Lucida, Arial, sans-serif;
+	padding:4px 6px;
+	text-align:left;
+	/*rounded corners*/
+	border-radius:7px;
+}
+#gleeSearchField{
+	outline:none;
+	-webkit-box-shadow:none;
+	width:90%;
+	margin:0;
+	background:none !important;
+	padding:0;
+	margin:3px 0;
+	border:none !important;
+	height:auto !important;
+	font-size:100px;
+	color:#fff;
+}
+#gleeSub{
+	font-size:15px !important;
+	font-family:inherit !important;
+	font-weight:normal !important;
+	height:auto !important;
+	margin:0 !important;
+	padding:0 !important;
+	color:inherit !important;
+	line-height:normal !important;
+}
+
+#gleeSubText, #gleeSubURL, #gleeSubActivity{
+	width:auto !important;
+	font-size:inherit !important;
+	color:inherit !important;
+	font-family:inherit !important;
+	line-height:20px !important;
+	font-weight:normal !important;
+}
+#gleeSubText{
+	float:left;	
+}
+#gleeSubURL{
+	display:inline;
+	float:right;
+}
+#gleeSubActivity{
+	height:10px;
+	display:inline;
+	float:left;
+	padding-left:5px;
+}</style><style>#shadowMeasureIt{display:none;position:fixed;width:100%;height:100%;top:0px;left:0px;opacity:0.4;background-color: #FFFFFF;z-Index:200000;cursor:crosshair}
+#divCoordMeasureIt{display:none;position:absolute;z-Index:200001;top:0px;left:0px;opacity:1;background-color: #FFFFFF;text-align:left;color:#000000;font-family: arial;font-size: 11px;letter-spacing:1;font-weight: bold;border: 1px solid;border-color: #C0210B;padding:3px}
+#divRectangleBGMeasureIt{width:100%;height:100%;opacity:0.2;background-color: #2D86DE;z-Index:199999;cursor:move}
+#divRectangleMeasureIt{display:none;border: 1px #000000 solid;position:absolute;z-Index:199999;cursor:move}
+#smallTextMeasureIt{color:#000000;font-family: arial;font-size: 7px;letter-spacing:1;font-weight: bold}</style><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="Content-Language" content="en">
+  
+
+  <meta name="category" content="Business,Financial Services,Merchant Services,Other Payment Systems,Micropayments">
+  <meta name="keywords" content="Allopass, allopass, code, codes, ticket, access ticket, telephone, tel, mobile, portable, sms, audiotel, audiotex, publicity, pub, micro payment, micropayment, payment, micro-payment, rentable, send sms,  show a profit, secure webpayment, web-payment, credit card, solution payment, pay per click, dollar, make money, benefits, payant, pay access, webmaster, webmasters, euro, benefit, remuneration, free, affiliation, platform of affiliation, marque blanche, sponsorship, sponsor, godson, filleul, banner, boost, increase traffic, security easy, utils for micropayment, system online, pay by phone, gainful, website, secured, online pay by credit card">
+  <meta name="description" content="AlloPass, European leader in its domain is a micropayment system and allows phone, sms and credit card billing. It&#39;s easy to set up and with it, website owners rapidly increase their revenues: see our programmes: access codes, affiliation, Sponsoring, advertisement">
+
+  <meta name="revisit-after" content="15 days">
+  <meta name="robots" content="index,follow">
+
+  <title>Pay by mobile | Allopass.com</title>
+
+  <link rel="stylesheet" type="text/css" media="all" href="./allo_files/base.css">
+  <link rel="stylesheet" type="text/css" media="all" href="./allo_files/carousel.css">
+  <link rel="shortcut icon" type="image/x-icon" href="https://payment.allopass.com/static/favicon.ico">
+
+  <script type="text/javascript" src="./allo_files/jquery-1.3.2.min.js"></script>
+<style type="text/css"> #lastpass-notification { height: 13px;padding: 7px 10px;text-align: left;position: relative;font-family: Arial,Helvetica,Garuda,sans-serif;;font-size: 11px;z-index: 12345;color: black;vertical-align: top;} #lastpass-content {display: inline;  padding-left: 5px;vertical-align: top;text-align: left;} .lppopup {position: absolute;border: 1px solid black;z-index: 99999;background: #fff;overflow: auto;x: 0px;y: 0px;width: 300px;height: 200px;display: none;} .lppopup tr:hover {background-color: #c9cdec;} .lppopup tr {background-color: #fff;} .lppopup td {font-size: 10px;font-family: Arial,Helvetica,Garuda,sans-serif;color: black;cursor: default;} .lpbutton {border-width: 1px;font-size: 11px;font-family: Arial,Helvetica,Garuda,sans-serif;float: right; margin-top: -4px;margin-right: 5px;padding-right: 5px;padding-left: 5px;border: outset 2px;color: black;background-color: #f0f0f0;} .lpbutton:hover {background-color: #e4e6f8;} #lastpass-notification img {margin: 0px 0px 0px 0px;padding: 0px 0px 0px 0px;} </style></head><style type="text/css">embed[type*="application/x-shockwave-flash"],embed[src*=".swf"],object[type*="application/x-shockwave-flash"],object[codetype*="application/x-shockwave-flash"],object[src*=".swf"],object[codebase*="swflash.cab"],object[classid*="D27CDB6E-AE6D-11cf-96B8-444553540000"],object[classid*="d27cdb6e-ae6d-11cf-96b8-444553540000"],object[classid*="D27CDB6E-AE6D-11cf-96B8-444553540000"]{	display: none !important;}</style><style type="text/css">embed[type*="application/x-silverlight-2"],object[type*="application/x-silverlight-2"]{display: none !important;}</style><body><div id="lastpass-notification" style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAbCAIAAAAoBpKtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NTFGMTM4RkQ1NzlFMTFERjlBODlDOUVCQTI0NEFFMDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NTFGMTM4RkU1NzlFMTFERjlBODlDOUVCQTI0NEFFMDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1MUYxMzhGQjU3OUUxMURGOUE4OUM5RUJBMjQ0QUUwOCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo1MUYxMzhGQzU3OUUxMURGOUE4OUM5RUJBMjQ0QUUwOCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PoGckHoAAABdSURBVHjarNLRCYAwDEXRFN1/mq7gAu7gBIJQTF66wv14/T7cJNCxnhngnce6kRvvhVzkx5ySuSpvT6zXdC50LdpLuJ+8+5nvdbsu+l/k7Yn2fm8PuuiAc5HbAgwAGOw78UxnUzUAAAAASUVORK5CYII=); background-attachment: initial; background-origin: initial; background-clip: initial; background-color: initial; margin-left: 0px; margin-right: 0px; margin-top: 0px; background-position: initial initial; background-repeat: repeat no-repeat; "><img style="display:inline;" src="data:image/gif;base64,R0lGODlhEAAQAPZVADsBAkECBFEGCmQDBGoEB3UIDWcOEn0dHnZGRnhBQntbXIILEoIMEoENFI8QGI0UHJMQGKERGqURGq4QGIsaIZ4fJq8WI68YJrQXJLIZJbgZJ7gZKLwcK74dLa4gKq4iLLUgLaApMLwpNrwsOKUzOcAfL8EhMcUjM8YkNMgoOJw+QKY8QtA5Sdo/T6dARa5FS6tOUr9MUqRRVrRVWY9pa5BmaZBqbMRKVNlRYclud/14iLyIiKuoqNGbneyPmfOAkPeElNGvsNO3t+aorfGjq+y/w8zMzNXU1N3S0t7W1t3a2uLR0e3U1vLd4OLh4ejo6Png4/bx8ff09Pr5+f7+/v///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAFYALAAAAAAQABAAAAfEgFaCVlCFhoWDgzk6QD+Oj0A6OYMyLSwdJR2amywtMoITKZgbFRsYIRqaKROCEpgZO1IkMFM7GJgSghGZKEVVQktVQyclJRG6JR8uM1NVVVEvKx7GyDHO11VUVTHUVgEECUlIR+RHSUoJBAGCAAMHKgpO8koIKgcDAIICCwwGRk89gjzhUYABAwGCGly4IIIIkxE3mvgAkeFCA0EPMBQ7gcNEio7FMDwQVAOCBQ6bNnGwAKHGIBoUHMicKZOCjUQ4cw4KBAA7"><div id="lastpass-content">A fillable form has been detected on this page.</div><img lptype="close" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Qzc0REJCN0E1Nzk4MTFERjlBODlDOUVCQTI0NEFFMDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Qzc0REJCN0I1Nzk4MTFERjlBODlDOUVCQTI0NEFFMDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDNzREQkI3ODU3OTgxMURGOUE4OUM5RUJBMjQ0QUUwOCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDNzREQkI3OTU3OTgxMURGOUE4OUM5RUJBMjQ0QUUwOCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pi85GUUAAAHnSURBVHjalFPdShtBFP72pybZJl0RU9HGJEv8i0pCLV4Ug1BKKYFS6G0v+gw+Qh/BZ+gjVFBRg2KQoCCC0i25sBHFi1YQmri7cZPd7ZkhGxqEmBz4ODPnnPn4zpkZYen9R7QsTHhN0NDdLglHhFu2kVvBacJGMpHU1Gdq19PVWhWVi8oNLfOEY59gdTm3rGUzWfRi+k89WtgtfKPlnE+Q05IaLMvqiYDVBoPB2Xq9HvUJwrZtg0EQBLwYGcL171t4nseTA09kxMeGUbn6A8d1eUwUReZCos9qmAbHaFTFq0wak4kRUmSi2bSRTsUwO5XC0KDSrvPJ5TaBYXD/o/wLg5GnmJlMwXU9KKEA4rExnJzqPOfbAwLTNNvJ7eIhq8DiQhaO46BYOkLp+KxjDp7bhUAJBSGIAhqNBu9VItDASJH7uAJFCSH/ZgmJ8Rj2iiWoagTZ+TRXsr6z3x6i67mdBHfGHff5tzkkE+Nc9trWLgKBAXz+9AEvM3P4W61ivbDfoUCKT7BHiK+iIHLJ5xeXNGUT3zd3+N6y6jjVy4iEFWzvHRBJjcfZlRPJqtD6CzVZksPow5pOk7nnfgule/v+HeuzF2ODlWW5TMsb/yGtSJJUab2uXg6zz/Tl/yHqhAwl+v7O/wQYADmm0h9caEy1AAAAAElFTkSuQmCC" onmouseover="this.src=&#39;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Qzc0REJCNzY1Nzk4MTFERjlBODlDOUVCQTI0NEFFMDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Qzc0REJCNzc1Nzk4MTFERjlBODlDOUVCQTI0NEFFMDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDNzREQkI3NDU3OTgxMURGOUE4OUM5RUJBMjQ0QUUwOCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDNzREQkI3NTU3OTgxMURGOUE4OUM5RUJBMjQ0QUUwOCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PtBSHX0AAAJSSURBVHjalFNNaBNBFP5m/5JstkZL2sYkBVNaShV66C1QPKiIVg96Lnjx4FUQBCl4FUGwxYsHPVi8WEQPFYKCYFAoNAhFQehB0ChJMZA1iWST7GbHN5vdpK1QcOBjeG/e9+33Zt+wp0cQLIOQJWRw8CoSNglVESh+cpqQi8eMjB7SAMbARJb5p9zfOIfVtlGpNSoUnid8DASWZ46lMxOpMUiyBCaxHnwFweeuS+BwaS+WKyOfvxZXKX0iEJgfTyWAUIg8yUTuiQgnnhH6MogsRNDtIp1OYrtYOt6xnREp6F+OREkgDK4bMOfPgUeHgLDuoTs8il8XFuEaMTAtAmhhSJIseBGlfzUa9a6qHlk5exnlVAZH376ES6I/FxYxNDmNet3EoUIexO676wtwSQWXNcS2NrEzPgljLouSosEhJ8bEFDob7xD/VIAraVQ7+CUDAVIUYHYbidwadsjiWPYktdxFPf8G8fc5v0ZcKvtXgBU+UJpDIvDDw+BnLsG2bXIrwa2ZYPnXgEOxV0UCdmevQIsgnAlydWkZ0ZlZ/H6+im4iDf30RZSIFFu5TSIO3MFoDAQsyJ4x6+pN6ERurj9D5OFdKHoUjVv3YJxaQJWchB/d783FfgEHqrfLjx+g+eM7lLUn6IDmokknd5bw59oNKOsvYPt1wZgy/y005pJJQwpGePcYY984++FWuQzHdUeDH7JRtSwaQhmKovQgq3vRzyswWy1B3iZeJWjh+jfTfFVrtTIhVT3IANq2A9Nqisd0ZfcdfCHMmpaVhWX913P+K8AAt/3RI0KZhqwAAAAASUVORK5CYII=&#39;" onmouseout="this.src=&#39;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Qzc0REJCN0E1Nzk4MTFERjlBODlDOUVCQTI0NEFFMDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Qzc0REJCN0I1Nzk4MTFERjlBODlDOUVCQTI0NEFFMDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDNzREQkI3ODU3OTgxMURGOUE4OUM5RUJBMjQ0QUUwOCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDNzREQkI3OTU3OTgxMURGOUE4OUM5RUJBMjQ0QUUwOCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pi85GUUAAAHnSURBVHjalFPdShtBFP72pybZJl0RU9HGJEv8i0pCLV4Ug1BKKYFS6G0v+gw+Qh/BZ+gjVFBRg2KQoCCC0i25sBHFi1YQmri7cZPd7ZkhGxqEmBz4ODPnnPn4zpkZYen9R7QsTHhN0NDdLglHhFu2kVvBacJGMpHU1Gdq19PVWhWVi8oNLfOEY59gdTm3rGUzWfRi+k89WtgtfKPlnE+Q05IaLMvqiYDVBoPB2Xq9HvUJwrZtg0EQBLwYGcL171t4nseTA09kxMeGUbn6A8d1eUwUReZCos9qmAbHaFTFq0wak4kRUmSi2bSRTsUwO5XC0KDSrvPJ5TaBYXD/o/wLg5GnmJlMwXU9KKEA4rExnJzqPOfbAwLTNNvJ7eIhq8DiQhaO46BYOkLp+KxjDp7bhUAJBSGIAhqNBu9VItDASJH7uAJFCSH/ZgmJ8Rj2iiWoagTZ+TRXsr6z3x6i67mdBHfGHff5tzkkE+Nc9trWLgKBAXz+9AEvM3P4W61ivbDfoUCKT7BHiK+iIHLJ5xeXNGUT3zd3+N6y6jjVy4iEFWzvHRBJjcfZlRPJqtD6CzVZksPow5pOk7nnfgule/v+HeuzF2ODlWW5TMsb/yGtSJJUab2uXg6zz/Tl/yHqhAwl+v7O/wQYADmm0h9caEy1AAAAAElFTkSuQmCC&#39;" style="float: right; margin-right: 10px; margin-bottom: -10px;" onclick="this.dispatchEvent(lpcustomEvent); document.getElementById(&#39;lastpass-notification&#39;).style.display=&#39;none&#39;"> <input type="button" id="lpnever" class="lpbutton" value="Never..." onclick="lpshowmenudiv(&quot;never&quot;);"><div id="lppopupnever" class="lppopup" style="height: 36px; display: none; "><table width="100%"><tbody><tr lptype="neverpage" onclick="this.dispatchEvent(lpcustomEvent);"><td>&nbsp;Never For This Page</td></tr><tr lptype="neverdomain" onclick="this.dispatchEvent(lpcustomEvent);"><td>&nbsp;Never For This Domain</td></tr></tbody></table></div><input type="button" id="lpfillform" class="lpbutton" value="Fill Form (5)" onclick="lpshowmenudiv(&quot;fillform&quot;);"><div id="lppopupfillform" class="lppopup" style="height: 180px; display: none; "><table width="100%"><tbody><tr lptype="fillform" ffid="2947923" onclick="this.dispatchEvent(lpcustomEvent);"><td>&nbsp;AMEX</td></tr><tr lptype="fillform" ffid="1547143" onclick="this.dispatchEvent(lpcustomEvent);"><td>&nbsp;Default - personal</td></tr><tr lptype="fillform" ffid="2947933" onclick="this.dispatchEvent(lpcustomEvent);"><td>&nbsp;Joint BoA Debit</td></tr><tr lptype="fillform" ffid="1936383" onclick="this.dispatchEvent(lpcustomEvent);"><td>&nbsp;Personal-Amex</td></tr><tr lptype="fillform" ffid="1875313" onclick="this.dispatchEvent(lpcustomEvent);"><td>&nbsp;Zeevex</td></tr><tr style="background-color: #fff;"><td><hr></td></tr><tr lptype="addprofile" onclick="this.dispatchEvent(lpcustomEvent);"><td>&nbsp;Add Profile</td></tr><tr lptype="addcreditcard" onclick="this.dispatchEvent(lpcustomEvent);"><td>&nbsp;Add Credit Card</td></tr><tr lptype="clearforms" onclick="this.dispatchEvent(lpcustomEvent);"><td>&nbsp;Clear Forms</td></tr><tr lptype="chooseprofilecc" onclick="this.dispatchEvent(lpcustomEvent);"><td>&nbsp;Choose Profile and Credit Card</td></tr></tbody></table></div></div>
+<!--[if    IE 7]><div class="iexplore7"><![endif]-->
+<!--[if lt IE 7]><div class="iexplore6"><![endif]-->
+
+    <div id="page">
+
+      <h1>Pay for <strong>STATIC PURCHASE</strong></h1>
+    <p id="secure-payment">Private and secure payment</p>
+
+  <div id="content">
+
+  <div id="worldwide">
+  <div class="layout">
+    <span class="country">
+      <img src="./allo_files/us.png" alt="United States" height="24" width="24"> United States
+    </span>
+    <span class="separator">&nbsp;</span>
+    <a class="more" href="https://payment.allopass.com/buy/select-country.apu?ids=199347&idd=782794&from=%2Fbuy%2Fbuy.apu&origin=us&country=us&carousel=row&type=zeevex">Choose your country</a>
+  </div>
+</div>
+<h2 class="payment-step">
+ <span class="step-number">1</span>
+ To obtain an access code quickly, <span>please follow these instructions</span></h2>
+
+<div class="payment-instruction-block">
+ <h2>Purchase of access codes with Zeevex</h2>
+<p class="subtitle">
+ On the next page, you will be asked to enter your Zeevex information.</p>
+
+<form class="formLayout notimer popup-965-950" method="post" action="https://payment.allopass.com/acte/zeevex/purchase.apu" target="_blank"><div><input type="hidden" name="formName" value="form1"></div> <fieldset>
+  <input type="hidden" name="ids" value="199347">
+<input type="hidden" name="idd" value="782794">
+<input type="hidden" name="lang" value="en">
+<input type="hidden" name="country" value="us">
+
+  <input type="hidden" name="autovalidate" value="1">
+
+        <p class="input">
+       <span class="label"><label for="numberOfCodes">Number of codes desired</label></span>
+       <span class="field">
+        <select class="comboBox" id="numberOfCodes" name="numberOfCodes"><option value="1">1 code for 3.00 USD</option><option value="2">2 codes for 6.00 USD</option><option value="3">3 codes for 9.00 USD</option><option value="4">4 codes for 12.00 USD</option><option value="5">5 codes for 15.00 USD</option><option value="6">6 codes for 18.00 USD</option><option value="7">7 codes for 21.00 USD</option><option value="8">8 codes for 24.00 USD</option><option value="9">9 codes for 27.00 USD</option><option value="10">10 codes for 30.00 USD</option></select>
+       </span>
+      </p>
+    <p class="input field-invalid">
+   <span class="label"><label for="netsurferEmail">Your email address</label></span>
+   <span class="field">
+    <input class="input-text" id="netsurferEmail" name="netsurferEmail" type="text" size="25" maxlength="100" value="" autocomplete="off">
+   </span>
+  </p>
+ </fieldset>
+ <div class="formSubmit"><button type="submit" class="disabled" title="Start payment"><span>Start payment</span></button></div>
+</form>
+
+
+
+</div>
+
+<h2 class="payment-step">
+ <span class="step-number">2</span>
+ Enter your access code <span>to get your purchase</span></h2>
+
+<div class="payment-instruction-block access-codes">
+ <form class="formLayout askcode" method="post" action="https://payment.allopass.com/acte/access.apu" target="_parent"><div><input type="hidden" name="formName" value="form2"></div>  <fieldset>
+     <input type="hidden" name="trxid" value="">
+     <input type="hidden" name="idd" value="782794">
+     <input type="hidden" name="ids" value="199347">
+     <input type="hidden" name="recall" value="1">
+     <input type="hidden" id="code-txt" name="code-txt" value="CODE%d">
+     <input class="input-text input-text-large text-center code-js" id="code[]" name="code[]" type="text" size="8" maxlength="8" value="" style="color: rgb(204, 204, 204); ">
+       <button type="submit" title="OK" class="disabled" disabled=""><span>OK</span></button>
+  </fieldset>
+ </form></div>
+
+ 
+
+
+
+
+
+ </div>
+</div>
+<div id="carousel-bottom">
+ <div id="copyright">
+  <p>
+    Service provided by Allopass. Copyright © 2010 Allopass Inc.
+    All rights reserved.  </p>
+</div> <div id="carousel" class="carousel in-row">
+  <div id="prev" class="links">
+    <a href="https://payment.allopass.com/buy/buy.apu?ids=199347&idd=782794&country=us&carousel=row#">Previous</a>
+  </div>
+
+  <div id="payment-methods">
+    <ul style="width: 234px; ">
+              <li class="">
+          <a href="https://payment.allopass.com/buy/buy.apu?ids=199347&idd=782794&country=us&carousel=row&type=premium-sms" id="premium-sms-worldwide">Premium Text Message</a>
+                  </li>
+              <li class="">
+          <a href="https://payment.allopass.com/buy/buy.apu?ids=199347&idd=782794&country=us&carousel=row&type=premium-calling" id="premium-calling">Premium Calling</a>
+                  </li>
+              <li class="active">
+          <a href="https://payment.allopass.com/buy/buy.apu?ids=199347&idd=782794&country=us&carousel=row&type=zeevex" id="zeevex">Zeevex</a>
+                  </li>
+          </ul>
+  </div>
+
+  <div id="next" class="links">
+    <a href="https://payment.allopass.com/buy/buy.apu?ids=199347&idd=782794&country=us&carousel=row&pos=1" class="" style="cursor: default; ">Next</a>
+  </div>
+</div>
+ 
+</div>
+
+<script type="text/javascript" src="./allo_files/carousel.js"></script>
+<script type="text/javascript">
+  
+  //<![CDATA[
+  $(document).ready(function() {
+    if (!jQuery.browser.msie || (parseInt(jQuery.browser.version) > 6)) {
+        $('#carousel').carousel();
+    }
+  });
+  //]]>
+  
+</script>
+
+<!--[if    IE 7]></div><![endif]-->
+<!--[if lt IE 7]></div><![endif]-->
+
+<div id="gleeBox" style="display: none; top: 35%; " class="GleeThemeGreener"><input type="text" id="gleeSearchField" value="" class="GleeThemeGreener" style="font-size: 50px; "><div id="gleeSub"><div id="gleeSubText">Nothing selected</div><div id="gleeSubActivity"></div><div id="gleeSubURL"></div></div></div><div style="display: none; " id="hiddenlpsubmitdiv"></div><script>try{for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){ var lastpass_f = document.forms[lastpass_iter]; if(typeof(lastpass_f.lpsubmitorig2)=="undefined"){ lastpass_f.lpsubmitorig2 = lastpass_f.submit; lastpass_f.submit = function(){ var form=this; var customEvent = document.createEvent("Event"); customEvent.initEvent("lpCustomEvent", true, true); var d = document.getElementById("hiddenlpsubmitdiv"); for(var i = 0; i < document.forms.length; i++){ if(document.forms[i]==form){ d.innerText=i; } } d.dispatchEvent(customEvent); form.lpsubmitorig2(); } } }}catch(e){}</script><div id="shadowMeasureIt"></div><div id="divCoordMeasureIt"></div><div id="divRectangleMeasureIt"><div id="divRectangleBGMeasureIt"></div></div><script>try{function lpshowmenudiv(id){   closelpmenus(id);   var div = document.getElementById('lppopup'+id);   var btn = document.getElementById('lp'+id);   if(btn && div){     var btnstyle = window.getComputedStyle(btn, null);     var divstyle = window.getComputedStyle(div, null);     var posx = btn.offsetLeft;     posx -= 80;     var divwidth = parseInt(divstyle.getPropertyValue('width'));     if(posx + divwidth > window.innerWidth - 25){       posx -= ((posx + divwidth) - window.innerWidth + 25);     }     div.style.left = posx + "px";     div.style.top = (btn.offsetTop + btnstyle.getPropertyValue('height')) + "px";         if(div.style.display=='block') div.style.display = 'none';     else div.style.display = 'block';       } }function closelpmenus(id){   if(typeof(lpgblmenus)!='undefined'){     for(var i=0; i < lpgblmenus.length; i++){       if(id==null || lpgblmenus[i]!='lppopup'+id)         document.getElementById(lpgblmenus[i]).style.display = 'none';     }   }} var lpcustomEvent = document.createEvent('Event'); lpcustomEvent.initEvent('lpCustomEventMenu', true, true); }catch(e){}</script><script>try{if(typeof(lpgblmenus)=='undefined'){ lpgblmenus = new Array(); }   lpgblmenus[lpgblmenus.length] = 'lppopupnever';   }catch(e){}</script><script>try{if(typeof(lpgblmenus)=='undefined'){ lpgblmenus = new Array(); }   lpgblmenus[lpgblmenus.length] = 'lppopupfillform';   }catch(e){}</script><script>try{document.addEventListener('mouseup', function(e){ if(typeof(closelpmenus)=='function'){closelpmenus();}}, false)}catch(e){}</script></body></html>

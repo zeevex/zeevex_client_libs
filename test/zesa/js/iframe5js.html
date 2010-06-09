@@ -1,0 +1,167 @@
+<html>
+<head>
+  <title>In-Page Iframe Test</title>
+  <script type="text/javascript" src="http://sandbox.zeevex.com/javascripts/jquery.js"></script>
+  <script type="text/javascript" src="http://sandbox.zeevex.com/javascripts/jquery/jquery.form.js"></script>
+  <script type="text/javascript" src="http://sandbox.zeevex.com/javascripts/zesa_client.js"></script>
+
+  <link href="http://sandbox.zeevex.com/stylesheets/blueprint/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> 
+<style>
+body { padding: 20px; }
+#payment a, #payment a:visited, #payment a:link, #payment a:active, #payment a:hover {
+  text-decoration: none;
+  color: inherit;
+  border: 0 none;
+}
+.centered { text-align: center;  margin: 0 auto; }
+#zeevex {
+  display:none; 
+  width: 550px; 
+  height: 380px; 
+  position: relative;
+}
+
+#spinner {
+ min-height: 10em;
+ min-width: 30em;
+ position: absolute;
+ display: none; 
+ z-index: 10;
+}
+
+#spinner span { position: absolute; top: 100px; left: 220px; }
+
+#zeevex_iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+</style>
+
+</head>
+<body>
+<form action="#" id="purchaseform" method="post" name="purchaseform" style="width: 100%; display: none;">
+  <input id="cmd" name="cmd" type="hidden" value="_xclick" />
+  <input id="iframe" name="iframe" type="hidden" value="1" />
+  <input id="business" name="business" type="hidden" value="admin@zeevex.com" />
+  <input id="invoice" name="invoice" type="hidden" value="20100521-062949" />
+  <input id="item_name" name="item_name" type="hidden" value="Leather Purse containing Coins of the Realm, and Gum" />
+  <input id="item_number" name="item_number" type="hidden" value="itemsku23591" />
+  <input id="amount" name="amount" type="hidden" value="305" />
+  <input id="quantity" name="quantity" type="hidden" value="1" />
+  <input id="currency_code" name="currency_code" type="hidden" value="ZXT" />
+  <input id="rm" name="rm" type="hidden" value="0" />
+  <!--  
+    <input id="return" name="return" type="hidden" value="/test/closewindow.html" />
+    <input id="cancel_return" name="cancel_return" type="hidden" value="/test/closewindow.html" />
+   -->
+</form>
+
+<div id="payment">
+<a href="#" onclick="payWithOther()">
+<img src="http://sandbox.zeevex.com/test/images/other2.png" />
+</a>
+
+<a href="#" onclick="payWithZeevex()">
+<img src="http://sandbox.zeevex.com/test/images/zxbutton.png" />
+</a>
+</div>
+
+<div id="wrapper">
+  <div id="zeevex">
+    <div id="spinner">
+      <span class="centered">Loading Zeevex...<br/><img src="http://sandbox.zeevex.com/images/spinner.gif" /></span>
+    </div>    
+  </div>
+  <div id="other" style="display:none;">
+    Other payment methods would display here.
+  </div>
+</div>
+
+<script type="text/javascript">
+// unique invoice id is required
+document.forms["purchaseform"]["invoice"].value = "Inv_" + Math.round(Math.random() * 1000000000)+"_"+(new Date().getTime());
+
+function loadPurchase(purchase) {
+  if (! purchase || ! purchase.url) {
+    alert("No URL found for purchase");
+    showLoading(false);
+    return;
+  }
+  iframe = document.createElement('IFRAME');
+  iframe.id = 'zeevex_iframe';
+  iframe.src = purchase.url;
+  document.getElementById('zeevex').appendChild(iframe);
+  jQuery('#zeevex_iframe')
+    .load(function() { showLoading(false); });
+}
+
+function payWithOther() {
+  jQuery('#wrapper > div').hide();
+  jQuery('#other').show();
+}
+
+function showZeevex(onoff) {
+  if (onoff) {
+    jQuery('#wrapper > div').hide();
+    jQuery('#zeevex').show();
+  } else {
+    jQuery('#zeevex').hide();
+  }
+}
+
+function showLoading(onoff) {
+  if (onoff) {
+    jQuery('#spinner').show();
+  } else {
+    jQuery('#spinner').hide();
+  }
+}
+
+function payWithZeevex() {
+  showZeevex(true);
+  if (document.getElementById('zeevex_iframe')) {
+    return;
+  }
+  showLoading(true);
+  
+  /*
+   * These are all valid ways to create a purchase request
+   *
+   */
+  // *** pass in a form element
+  // Zeevex.submitPurchaseRequest(document.forms['purchaseform'], loadPurchase);
+
+  // *** pass in a jQuery selector which returns a single form element
+  // Zeevex.submitPurchaseRequest('#purchaseform', loadPurchase);
+
+  // *** pass in a jQuery element which contains a form
+  // Zeevex.submitPurchaseRequest(jQuery('#purchaseform'), loadPurchase);
+
+  // *** pass in a plain Javascript object as key-value pairs representing
+  //     ZESA purchase request attributes
+  
+  Zeevex.zesa.submitPurchaseRequest({
+                  "cmd": "_xclick", 
+                  "business": "admin@zeevex.com", 
+                  "invoice": "Inv_" + Math.round(Math.random() * 1000000000)+"_"+(new Date().getTime()), 
+                  "quantity": 1, 
+                  "iframe": 1, 
+                  "amount": 30, 
+                  "item_name": "Leather Purse", 
+                  "rm": 0, 
+                  "currency_code": "ZXT", 
+                  "item_number": "itemsku23591"
+                  }, 
+        loadPurchase);
+}
+
+Zeevex.zesa.init('http://sandbox.zeevex.com/');
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,338 @@
+/* Quick style reset */
+html, body {
+    overflow: hidden;
+}
+body {
+  margin:0;
+  padding:0;
+}
+
+/*
+ * Global carousel layout
+ */
+.carousel a {
+  outline: none;
+}
+.carousel .links {
+  z-index: 99;
+}
+.carousel .links a {
+  display: block;
+  font-size: 0;
+  text-indent: -9999px;
+}
+.carousel ul {
+  position: absolute;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.carousel li {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.carousel ul a {
+  display: block;
+  text-decoration: none;
+  font-size: 11px;
+  color: #555;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*
+ * Row mode
+ */
+.carousel.in-row {
+  position: relative;
+  background: url(images/carousel-row.png) left top repeat-x;
+  height: 75px;
+}
+.carousel.in-row .links {
+  top: 0;
+  position: absolute;
+}
+.carousel.in-row #prev {
+  left: 0;
+}
+.carousel.in-row #next {
+  right: 0;
+}
+.carousel.in-row .links a {
+  height: 75px;
+  width: 41px;
+}
+.carousel.in-row #prev a {
+  background: url(images/carousel-row.png) left -75px repeat-x;
+}
+.carousel.in-row #prev a.enable {
+  background: url(images/carousel-row.png) right -75px no-repeat;
+}
+.carousel.in-row #next a {
+  background: url(images/carousel-row.png) left -150px repeat-x;
+}
+.carousel.in-row #next a.enable {
+  background: url(images/carousel-row.png) right -150px no-repeat;
+}
+.carousel.in-row #payment-methods {
+  position: absolute;
+  height: 75px;
+  left: 41px;
+  right: 41px;
+}
+.carousel.in-row ul {
+  overflow: hidden;
+  height: 75px;
+}
+.carousel.in-row li {
+  float: left;
+  text-align: center;
+}
+.carousel.in-row ul a {
+  height: 75px;
+  width: 78px;
+  line-height: 132px;
+}
+.carousel.in-row #premium-sms {
+  background: url(images/carousel-row.png) center -225px no-repeat;
+}
+.carousel.in-row .active #premium-sms {
+  background: url(images/carousel-row.png) center -300px no-repeat;
+}
+.carousel.in-row #premium-calling {
+  background: url(images/carousel-row.png) center -375px no-repeat;
+}
+.carousel.in-row .active #premium-calling {
+  background: url(images/carousel-row.png) center -450px no-repeat;
+}
+.carousel.in-row #isp-billing {
+  background: url(images/carousel-row.png) center -525px no-repeat;
+}
+.carousel.in-row .active #isp-billing {
+  background: url(images/carousel-row.png) center -600px no-repeat;
+}
+.carousel.in-row #prepaid-card {
+  background: url(images/carousel-row.png) center -675px no-repeat;
+}
+.carousel.in-row .active #prepaid-card {
+  background: url(images/carousel-row.png) center -750px no-repeat;
+}
+.carousel.in-row #hipay {
+  background: url(images/carousel-row.png) center -825px no-repeat;
+}
+.carousel.in-row .active #hipay {
+  background: url(images/carousel-row.png) center -900px no-repeat;
+}
+.carousel.in-row #credit-card {
+  background: url(images/carousel-row.png) center -975px no-repeat;
+}
+.carousel.in-row .active #credit-card {
+  background: url(images/carousel-row.png) center -1050px no-repeat;
+}
+.carousel.in-row #dineromail {
+  background: url(images/carousel-row.png) center -1125px no-repeat;
+}
+.carousel.in-row .active #dineromail {
+  background: url(images/carousel-row.png) center -1200px no-repeat;
+}
+.carousel.in-row #mpme {
+ background: url(images/carousel-row.png) center -2025px no-repeat;
+}
+.carousel.in-row .active #mpme {
+  background: url(images/carousel-row.png) center -2100px no-repeat;
+}
+.carousel.in-row #payfone{
+  background: url(images/carousel-row.png) center -1275px no-repeat;
+}
+.carousel.in-row .active #payfone {
+  background: url(images/carousel-row.png) center -1350px no-repeat;
+}
+.carousel.in-row #paypal {
+  background: url(images/carousel-row.png) center -1425px no-repeat;
+}
+.carousel.in-row .active #paypal {
+  background: url(images/carousel-row.png) center -1500px no-repeat;
+}
+.carousel.in-row #zeevex{
+  background: url(images/carousel-row.png) center -1575px no-repeat;
+}
+.carousel.in-row .active #zeevex {
+  background: url(images/carousel-row.png) center -1650px no-repeat;
+}
+.carousel.in-row #turkcell{
+  background: url(images/carousel-row.png) center -1725px no-repeat;
+}
+.carousel.in-row .active #turkcell {
+  background: url(images/carousel-row.png) center -1800px no-repeat;
+}
+.carousel.in-row #premium-sms-worldwide {
+  background: url(images/carousel-row.png) center -1875px no-repeat;
+}
+.carousel.in-row .active #premium-sms-worldwide {
+  background: url(images/carousel-row.png) center -1950px no-repeat;
+}
+.carousel.in-row #hipay-belgium {
+  background: url(images/carousel-row.png) center -2175px no-repeat;
+}
+.carousel.in-row .active #hipay-belgium {
+  background: url(images/carousel-row.png) center -2250px no-repeat;
+}
+.carousel.in-row #hipay-germany {
+  background: url(images/carousel-row.png) center -2325px no-repeat;
+}
+.carousel.in-row .active #hipay-germany {
+  background: url(images/carousel-row.png) center -2400px no-repeat;
+}
+
+/*
+ * Column mode
+ */
+.carousel.in-col {
+  width: 200px;
+}
+.carousel.in-col #prev {
+  background: url(images/carousel-col.png) left top repeat-x;
+}
+.carousel.in-col #next {
+  background: url(images/carousel-col.png) left -25px repeat-x;
+  bottom: 0;
+}
+.carousel.in-col .links {
+  width: 199px;
+  border-right: 1px solid #dfdfdf;
+}
+.carousel.in-col .links a {
+  z-index: 99;
+  height: 25px;
+  width: 199px;
+}
+.carousel.in-col #prev {
+  border-bottom: 1px solid #dfdfdf;
+  position: relative;
+}
+.carousel.in-col #next {
+  border-top: 1px solid #dfdfdf;
+}
+.carousel.in-col #prev a {
+  background: url(images/carousel-col.png) 87px -50px no-repeat;
+}
+.carousel.in-col #prev a.enable {
+  background: url(images/carousel-col.png) 87px -100px no-repeat;
+}
+.carousel.in-col #next {
+  position: absolute;
+}
+.carousel.in-col #next a {
+  background: url(images/carousel-col.png) 87px -75px no-repeat;
+}
+.carousel.in-col #next a.enable {
+  background: url(images/carousel-col.png) 87px -125px no-repeat;
+}
+.carousel.in-col #payment-methods {
+  position: fixed;
+/*  z-index: -1; */
+  top: 26px;
+  bottom: 25px;
+}
+.carousel.in-col ul li {
+  border-bottom: 1px solid #ccc;
+  background: url(images/carousel-col.png) right -184px no-repeat;
+}
+.carousel.in-col li.active {
+  background: url(images/carousel-col.png) right -150px no-repeat;
+}
+.carousel.in-col ul a {
+  width: 150px;
+  line-height: 34px;
+  padding-left: 50px;
+}
+.carousel.in-col #premium-sms {
+  background: url(images/carousel-col.png) 5px -229px no-repeat;
+}
+.carousel.in-col .active #premium-sms {
+  background: url(images/carousel-col.png) 5px -264px no-repeat;
+}
+.carousel.in-col #premium-calling {
+  background: url(images/carousel-col.png) 5px -299px no-repeat;
+}
+.carousel.in-col .active #premium-calling {
+  background: url(images/carousel-col.png) 5px -334px no-repeat;
+}
+.carousel.in-col #isp-billing {
+  background: url(images/carousel-col.png) 5px -369px no-repeat;
+}
+.carousel.in-col .active #isp-billing {
+  background: url(images/carousel-col.png) 5px -404px no-repeat;
+}
+.carousel.in-col #prepaid-card {
+  background: url(images/carousel-col.png) 5px -439px no-repeat;
+}
+.carousel.in-col .active #prepaid-card {
+  background: url(images/carousel-col.png) 5px -474px no-repeat;
+}
+.carousel.in-col #hipay {
+  background: url(images/carousel-col.png) 5px -509px no-repeat;
+}
+.carousel.in-col .active #hipay {
+  background: url(images/carousel-col.png) 5px -544px no-repeat;
+}
+.carousel.in-col #credit-card {
+  background: url(images/carousel-col.png) 5px -579px no-repeat;
+}
+.carousel.in-col .active #credit-card {
+  background: url(images/carousel-col.png) 5px -614px no-repeat;
+}
+.carousel.in-col #dineromail {
+  background: url(images/carousel-col.png) 5px -649px no-repeat;
+}
+.carousel.in-col .active #dineromail {
+  background: url(images/carousel-col.png) 5px -684px no-repeat;
+}
+.carousel.in-col #mpme {
+  background: url(images/carousel-col.png) 5px -1069px no-repeat;
+}
+.carousel.in-col .active #mpme {
+  background: url(images/carousel-col.png) 5px -1104px no-repeat;
+}
+.carousel.in-col #payfone {
+  background: url(images/carousel-col.png) 5px -719px no-repeat;
+}
+.carousel.in-col .active #payfone {
+  background: url(images/carousel-col.png) 5px -754px no-repeat;
+}
+.carousel.in-col #paypal {
+  background: url(images/carousel-col.png) 5px -789px no-repeat;
+}
+.carousel.in-col .active #paypal {
+  background: url(images/carousel-col.png) 5px -824px no-repeat;
+}
+.carousel.in-col #zeevex {
+  background: url(images/carousel-col.png) 5px -859px no-repeat;
+}
+.carousel.in-col .active #zeevex {
+  background: url(images/carousel-col.png) 5px -894px no-repeat;
+}
+.carousel.in-col #turkcell {
+  background: url(images/carousel-col.png) 5px -929px no-repeat;
+}
+.carousel.in-col .active #turkcell {
+  background: url(images/carousel-col.png) 5px -964px no-repeat;
+}
+.carousel.in-col #premium-sms-worldwide {
+  background: url(images/carousel-col.png) 5px -999px no-repeat;
+}
+.carousel.in-col .active #premium-sms-worldwide {
+  background: url(images/carousel-col.png) 5px -1034px no-repeat;
+}
+
+#carousel-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;    
+}
+
+#carousel-bottom #copyright {
+    margin-bottom: 3px;
+    margin-right: 8px;
+}

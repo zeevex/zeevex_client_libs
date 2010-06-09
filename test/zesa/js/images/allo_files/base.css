@@ -1,0 +1,1029 @@
+@import "duration.css";
+
+/* Reset styles */
+html,body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input { margin: 0; padding: 0; }
+h1,h2,h3,h4,h5,h6,pre,code,address,caption,cite,code,em,strong,th { font-size: 1em; font-weight: normal; font-style: normal; }
+ul,ol { list-style: none; }
+fieldset,img { border: none; }
+caption,th { text-align: left; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* To preserve line-height 
+   and selector appearance */
+sub {vertical-align:text-bottom;}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}
+legend{color:#000;}
+del,ins{text-decoration:none;}
+img { border: 0; }
+
+/* Global Layout */
+html, body {
+  min-height: 100%; /* Not supported by IE 5/6, but required for Firefox/Opera */
+  width: 100%;
+  height: 100%;
+}
+body {
+  font: 12px/1.3em Verdana, "Bitstream vera sans", Geneva, Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  color: #333;
+  letter-spacing: -0.2px;
+}
+.clear, .clearer {
+  clear: both;
+}
+.clearer {
+  display: block;
+  margin: 0;
+  padding: 0;
+  height: 0;
+  line-height: 1px;
+  font-size: 1px;
+}
+a {
+  color: #6376b4;
+}
+a:link, a:visited, a:active {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a.more {
+  white-space: nowrap;
+  padding-right: 8px;
+  background: url(icons/morearrow_blue.gif) no-repeat 100% 50%;
+  outline: none;
+}
+a[rel="external"], a.external, a[rel="policy"], a.policy {
+  white-space: nowrap;
+  padding-right: 15px;
+  background: url(icons/external10x10.gif) no-repeat 100% 50%;
+}
+strong {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
+sup {
+  padding-left: 1px;
+  font-size: 10px !important;
+  font-weight: normal !important;
+  vertical-align: baseline;
+  position: relative;
+  bottom: 0.33em;
+  color: #76797c;
+}
+.iexplore6 sup, .iexplore7 sup { 
+  position: static !important;
+}
+abbr {
+  border: 0;
+}
+p {
+  margin-bottom: 18px;
+}
+/* classes for Alignment */
+.text-center {text-align: center}
+.text-right  {text-align: right}
+.text-left   {text-align: left}
+h1 {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1em;
+  background: url('images/title-bg.png') repeat-x;
+  padding-left: 7px; 
+  height: 26px;
+  line-height: 26px;
+}
+h1 strong {
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 18px;
+  line-height: 18px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  color: #3b3b3b;
+  text-align: center;
+}
+h2.error {
+  color: red;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 14px;
+  color: #555;
+  line-height: 18px;
+}
+.big {
+  font-size: 13px;
+}
+p.subtitle {
+  display: block;
+  font-size: 11px;
+  line-height: 12px;
+  font-weight: normal;
+  color: #666;
+  margin-top: -15px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+#page {
+  position: relative;
+}
+#content {
+  padding: 8px 8px 3px 8px;
+}
+
+/* Bottom page copyright */
+#copyright {
+  height: 20px; display: block;
+  background: url('images/logo.gif') 100% 50% no-repeat;
+}
+#copyright p {
+  display: none;
+}
+
+
+span.payment-solution-logo {
+    display: block;
+    height: 40px;
+    width: 250px;
+    margin: 1em auto;
+}
+
+/**
+ * Secure payment title 
+ */
+#secure-payment, #secure-payment-box {
+  height: 26px;
+  line-height: 26px;
+}
+#secure-payment, #secure-payment-box {
+  position: absolute;
+  top: 0;
+  font-size: 10px;
+  color: #999;
+}
+#secure-payment {
+  right: 0;
+  padding-right: 14px;
+  background: url('icons/secure-lock.gif') right center no-repeat;
+  margin-right: 7px;
+}
+#secure-payment-box {
+  right: 0;
+  padding-right: 14px;
+  background: url('icons/secure-lock.gif') left center no-repeat;
+  margin-right: 17px;
+  padding-left: 10px;
+}
+
+
+/**
+ * Country selector button
+ */
+#worldwide {
+  float: right;
+  white-space: nowrap;
+  line-height: 32px;
+  background: url('images/worldwide.png') -1px top;
+  padding-left: 10px;
+  font-size: 11px;
+  margin: .2em 0 0 0;
+}
+#worldwide .layout {
+  background: url('images/worldwide.png') right top;
+}
+#worldwide .country {
+  height: 32px;
+  float: left;
+  font-weight: bold;
+  color: #666;
+}
+#worldwide .country img {
+  display: block;
+  float: left;
+  margin: 4px 4px 4px 0;
+}
+#worldwide .separator {
+  display: block;
+  float: left;
+  font-size: 0;
+  text-indent: -9999px;
+  width: 1px;
+  background: url('images/worldwide.png');
+  margin: 0 5px;
+  height: 32px;
+}
+#worldwide .more {
+  margin-right: 10px;
+}
+
+.input-text-error {
+    border: 2px solid #e35f70;
+}
+
+/**
+ * Multi-step payment progress
+ */
+h2.payment-step {
+  line-height: 1em;
+  font-size: 11px !important;
+  text-align: left !important;
+  font-weight: normal !important;
+  margin: .5em 0; padding: 0;
+}
+h2.payment-step span {
+  display: block;
+  font-size: 11px !important;
+  line-height: 11px !important;
+  color: #aaa;
+}
+h2.payment-step span.step-number {
+  float: left;
+  width: 20px !important;
+  font-size: 29px !important;
+  line-height: 24px !important;
+  padding-right: 4px !important;
+  margin-right: 5px !important;
+  border-right: 2px solid #ddd;
+}
+.payment-instruction-block {
+  clear: both;
+  margin: 2em auto;
+  text-align: center;
+}
+.progress-bar {
+  display: block;
+  width: 400px; height: 13px;
+  background: url('images/progress-bar.png') center bottom repeat-x;
+  border-right: 1px solid #d5d5d5;
+  border-left:  1px solid #b4b4b4;
+  margin: 0 auto;
+}
+.progress-bar span {
+  background: url('images/loader.gif') center bottom repeat-x;
+  border-right: 1px solid #adb3d3;
+  border-left:  1px solid #adb3d3;
+  position: relative; left: -1px;
+  text-indent: -1000px;
+  height: inherit;
+  display: block;
+}
+
+
+/*
+ * Scaffolding
+ * Show the list of payment stages
+ */
+.scaffolding {
+  margin: 10px auto 20px auto;
+  color: #aaa;
+  width: 470px;
+  position: relative;
+}
+.scaffolding li {
+  font-size: 11px;
+  position: relative;
+  padding: 7px 10px 7px 35px;
+}
+.scaffolding li span.stage-checkbox {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 32px;
+  height: 31px;
+  font-size: 0;
+  text-indent: -9999px;
+}
+.iexplore6 li span.stage-checkbox {
+  left: -35px;
+}
+.scaffolding li strong {
+  font-weight: normal !important;
+  display: block;
+  font-size: 12px;
+}
+.scaffolding .stage-1,
+.scaffolding .stage-2,
+.scaffolding .stage-3 {
+  font-weight: normal !important;
+  color: #aaa;
+}
+.scaffolding .stage-1-active,
+.scaffolding .stage-2-active,
+.scaffolding .stage-3-active {
+  font-weight: normal !important;
+  color: #000;
+}
+.scaffolding .stage-1-active strong,
+.scaffolding .stage-2-active strong,
+.scaffolding .stage-3-active strong {
+  font-weight: bold !important;
+  color: inherit;
+}
+.scaffolding .stage-done {
+  font-weight: normal !important;
+  color: #777;
+}
+.scaffolding .stage-done span.stage-checkbox {
+  background: url('images/stage-sprite.png') -5px -6px no-repeat;
+}
+.scaffolding .stage-1 span.stage-checkbox {
+  background: url('images/stage-sprite.png') -5px -39px no-repeat;
+}
+.scaffolding .stage-2 span.stage-checkbox {
+  background: url('images/stage-sprite.png') -5px -111px no-repeat;
+}
+.scaffolding .stage-3 span.stage-checkbox {
+  background: url('images/stage-sprite.png') -5px -183px no-repeat;
+}
+.scaffolding .stage-1-active span.stage-checkbox {
+  background: url('images/stage-sprite.png') -5px -75px no-repeat;
+}
+.scaffolding .stage-2-active span.stage-checkbox {
+  background: url('images/stage-sprite.png') -5px -147px no-repeat;
+}
+.scaffolding .stage-3-active span.stage-checkbox {
+  background: url('images/stage-sprite.png') -5px -219px no-repeat;
+}
+
+.footer-notes {
+  color: #999;
+  font-size: .9em;
+  margin: .5em 0;
+}
+.footer-notes a {
+  color: #888;
+  text-decoration: underline;
+}
+.legal {
+  text-align: center;
+  color: #aaa;
+  font-size: 10px;
+  line-height: 12px;
+}
+.legal p {
+  margin: 0 auto;
+}
+.legal a {
+  color: #aaa;
+}
+.title span {
+  display: block;
+  color: #888;
+}
+.keyword, .shortcode, .phone-number {
+  color: #1e2d83;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0 3px;
+}
+.keyword {
+  font-size: 24px;
+  line-height: 40px;
+  letter-spacing: -1px;
+}
+.shortcode {
+  font-size: 28px;
+  line-height: 40px;
+}
+.phone-number {
+  display: block;
+  font-size: 28px;
+  line-height: 28px;
+  margin: 5px auto;
+}
+.message span.smsplus {
+  background: url('images/code.png') right 8px no-repeat;
+  padding-right: 20px;
+}
+.message strong {
+  font-weight: bold;
+  color: #3b3b3b;
+}
+
+/**
+ * Country selection page layout
+ */
+.countries {
+  margin-bottom: 45px;
+}
+.countries h3 {
+  font-weight: normal;
+}
+.countries .rounded-box {
+    margin-bottom: 1em;
+}
+.countries ul li {
+  float: left;
+  margin-left: 5px;
+  width: 152px;
+}
+.countries ul a {
+  outline: none;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  line-height: 14px;
+  display: block;
+  padding-left: 20px;
+  margin: 3px 0;
+  color: #555;
+  font-size: 11px;
+}
+.countries ul a:hover {
+  text-decoration: underline;
+}
+.countries ul a img {
+  vertical-align: middle;
+}
+
+
+.legend {
+  font-size: 11px;
+  color: #888;
+}
+.detail {
+  text-align: center;
+  margin: .5em 0;
+}
+.detail .formPrologue {
+  display: none;
+}
+.introduction {
+  text-align: center;
+  color: #999;
+  margin-top: 10px;
+  margin-bottom: 7px;
+  font-size: 11px;
+}
+#table-container, #table-container #main-table {
+  min-height: 100%; /* Not supported by IE 5/6, but required for Firefox/Opera */
+  width: 100%;
+  height: 100%;
+}
+#main-table {
+  background: url('images/table-bg.png') 199px top repeat-y;
+}
+
+
+/**
+ * Form and form elements
+ */
+form.formLayout {
+  width: 510px;
+  margin: 0 auto;
+}
+form.formLayout fieldset {
+  margin: 5px 0;
+}
+form.formLayout p {
+  margin: 0 0 5px 0;
+}
+form.formLayout p.input span.label {
+  float: left;
+  width: 200px;
+  margin-right: 10px;
+  text-align: right !important;
+  line-height: 24px;
+  color: #000;
+}
+
+.label-with-sample {
+  line-height: 14px !important;
+}
+.label-with-sample .sample {
+  color: #666;
+  font-size: 11px;
+  line-height: 12px;
+}
+
+form.formLayout p.input span.label label {
+  display: block;
+  float: right;
+  padding-left: 18px;
+}
+
+form.formLayout p.input span.field {
+  display: block;
+  margin-left: 210px;
+  text-align: left !important;
+}
+
+form.formLayout p.input.field-valid .label label, form.formLayout label.field-valid {
+  background: url('images/valid.png') left 3px no-repeat;
+}
+
+form.formLayout div.formSubmit {
+  text-align: center;
+}
+form.formLayout p.price-information {
+  text-align: center;
+  font-size: 12px;
+  line-height:18px;
+}
+form.formLayout p.price-information .price {
+  color:#3B3B3B;
+  font-size:16px;
+  line-height:18px;
+  vertical-align: top;
+  font-family: Arial, Verdana, sans-serif;
+}
+form.formLayout p.additional-instructions, form.formLayout p.note {
+  font-size: 11px;
+  line-height: 12px;
+  color: #666;
+}
+form.formLayout p.additional-instructions {
+    margin: 1em 0 .5em 0;
+}
+form.formLayout p.note {
+  margin-left: 210px;
+}
+/* Errors */
+.fieldError {
+  color: #e05921;
+  display: block;
+  font-weight: normal;
+  font-size: 11px;
+  margin: .5em 0;
+}
+/* Button */
+.button {
+  cursor: pointer;
+  border: 0;
+  display: inline-block;
+  background: url('images/button.png') right top no-repeat;
+  text-align: center;
+  height: 33px;
+  line-height: 33px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #666;
+  padding: 0 28px 0 0;
+  text-decoration: none !important;
+}
+a.button:hover {
+  color: #000 !important;
+}
+.button span {
+  display: inline-block;
+  white-space:nowrap;
+  line-height: 29px;
+  white-space: nowrap;
+  height: 33px;
+  line-height: 33px;
+  padding: 0 0 0 28px;
+  background: url('images/button.png') left top no-repeat;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  background: url('images/button.png') right top no-repeat;
+  text-align: center;
+  height: 33px;
+  line-height: 33px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #666;
+  margin-top: 10px;
+  padding: 0 28px 0 0;
+}
+button span {
+  display: block;
+  white-space: nowrap;
+  height: 33px;
+  line-height: 33px;
+  padding: 0 0 0 28px;
+  background: url('images/button.png') left top no-repeat;
+
+}
+button.active {
+  background: url('images/button.png') right -47px no-repeat;
+}
+button.active span {
+  color: #425516;
+  background: url('images/button.png') left -47px no-repeat;
+}
+button.disabled {
+  cursor: default;
+}
+button.disabled span {
+  color: #bbbbbb !important;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: none;
+}
+/* Safari and Google Chrome only - fix margins */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  button span {
+    margin-top: -1px;
+  }
+}
+.iexplore6 button,
+.iexplore7 button { 
+  width: auto;
+  overflow: visible;
+}
+/* Input type text */
+.input-text, .input-text-large {
+  background: #fff url('images/field.png') left top repeat-x;
+  border-top: 1px solid #7c7c7c;
+  border-left: 1px solid #c3c3c3;
+  border-bottom: 1px solid #dddddd;
+  border-right: 1px solid #c3c3c3;
+  color: #444;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 2px;
+}
+.input-text {
+  height: 18px;
+  line-height: 18px;
+  font-size: 12px;
+}
+.input-text-large {
+  height: 24px;
+  line-height: 24px;
+  font-size: 18px;
+}
+/* Code field */
+.code-js {
+  width: 90px;
+  font-family: "Andale Mono", monospace;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+/* Credit card radio icons */
+
+form.formLayout table.credit-card {
+  height: 24px;
+  margin: 0 auto;
+}
+form.formLayout table.credit-card td.last {
+  padding-right: 20px;
+}
+
+form.formLayout table.credit-card td {
+  padding: 0;
+  vertical-align: middle;
+  line-height:24px;
+  height: 24px;
+}
+form.formLayout table.credit-card input {
+  margin-left: 10px;
+  margin-right: 2px;
+  vertical-align:text-bottom;
+}
+
+.credit-card-type {
+  display: block;
+  height: 24px;
+  width: 38px;
+  text-indent: -9999px;
+  font-size: 0;
+  cursor: pointer;
+}
+#visa {
+  background: url('images/credit-cards-sprite.png') -38px top no-repeat
+}
+#master-card {
+  background: url('images/credit-cards-sprite.png') no-repeat
+}
+#carte-bleue {
+  background: url('images/credit-cards-sprite.png') -76px top no-repeat
+}
+
+/* H2 title icons */
+h2.icon {
+  display: block;
+  line-height: 28px;
+  text-align: left;
+  height: 32px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-image: url('images/title-icons-sprite.png');
+  background-repeat: no-repeat;
+}
+h2.success {
+  background-position: left 0;
+}
+h2.fatal,
+h2.payment-failure,
+h2.http-403,
+h2.http-404,
+h2.http-500 {
+  background-position: left -32px;
+}
+h2.payment-timeout {
+  background-position: left -64px;
+}
+h2.market-unavailable {
+  background-position: left -96px;
+}
+
+
+/**
+ * Error page layout
+ */
+div#error-page {
+  width: 510px;
+  margin: 0 auto;
+}
+div#error-page p {
+  margin: 7px 0;
+}
+div#error-page div.issue p strong {
+  color: #555;
+}
+div#error-page div.support h3 {
+  margin-top: 28px;
+}
+div#error-page div.support ul.contact {
+  margin: 10px 7px;
+}
+div#error-page div.support ul.contact li {
+  padding-left: 20px;
+  line-height: 24px;
+}
+div#error-page div.support ul.contact li.email {
+  background: url('images/contact-icons-sprite.png') left 4px no-repeat;
+}
+div#error-page div.support ul.contact li.phone {
+  background: url('images/contact-icons-sprite.png') left -28px no-repeat;
+}
+div#error-page div.support ul.contact li.phone strong {
+  letter-spacing: -1pt;
+}
+
+#payment-progress {
+  height: 100px;
+  background: url('images/payment-progress.gif') no-repeat center center;
+}
+
+.provider-waiting {
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  height: 100px;
+  text-align: center;
+  line-height: 200px;
+  background: url('images/provider-waiting.gif') center center no-repeat;
+}
+
+/* Small tools icons */
+a.tool-icon {
+  padding-left: 19px;
+  line-height: 40px;
+  background-image: url('images/tools-icons-sprite.png');
+  background-repeat: no-repeat;
+}
+
+a.print {
+  background-position: left top;
+}
+
+a.save {
+  background-position: left -32px;
+}
+
+a.right-space {
+  padding-right: 10px;
+}
+
+/* Boites de messages */
+.rounded-box {
+  padding: .5em 1em;
+  position: relative;
+  border: 1px solid #dfdfdf;
+}
+.rounded-box-tlc,
+.rounded-box-trc,
+.rounded-box-blc,
+.rounded-box-brc {
+  display: block;
+  position: absolute;
+  font-size: 0;
+  width: 7px; height: 7px;
+  background-repeat: no-repeat;
+  background-image: url('images/rounded-box-sprite-border.png');
+}
+.rounded-box-tlc { background-position: -8px  -5px; top: -1px; left: -1px; }
+.rounded-box-trc { background-position: -15px -5px; top: -1px; right: -1px; }
+.rounded-box-blc { background-position: -8px  -12px; bottom: -1px; left: -1px; }
+.rounded-box-brc { background-position: -15px -12px; bottom: -1px; right: -1px; }
+
+.iexplore6 .rounded-box { 
+  position: inherit !important;
+}
+
+.iexplore6 .rounded-box-tlc, .iexplore6 .rounded-box-trc,
+.iexplore6 .rounded-box-blc, .iexplore6 .rounded-box-brc {
+  display: none
+}
+
+.rounded-box.info {
+  background: #fafafa;
+}
+
+.rounded-box.infocodes {
+  background: #000;
+}
+
+.receipt {
+  width: 100%;
+}
+
+table.receipt {
+    font-size: 11px;
+    color: #666;
+    margin: 0 1em;
+}
+.receipt td.label {
+  white-space: nowrap;
+  padding-right: 20px;
+  color: #666;
+}
+
+.receipt td.field {
+  width: 100%;
+}
+
+
+.access-codes-list ul {
+  margin-left: 24px;
+}
+
+.access-codes-list ul li {
+  float: left;
+  display: block;
+  margin-right: 24px;
+  font-size: 13px;
+  font-weight: bold;
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  line-height: 18px;
+  width: 66px;
+  color: #555;
+}
+
+.access-codes-list ul li.last {
+  margin-right: 0;
+}
+
+.rounded-box-icon {
+  position: absolute;
+  display: block;
+  height: 32px;   
+  width: 32px;
+  right: -10px;
+  top: -10px;
+}
+
+.rounded-box-icon.code {
+  background: url('images/icon-code.png');
+}
+
+.rounded-box-icon.receipt {
+  background: url('images/icon-receipt.png');
+}
+
+.field-valid input {
+  border: 2px solid #76b521;
+  margin: -1px;
+}
+
+.credit-card-number {
+  text-align: center;
+  margin: 0 auto !important;
+}
+
+.credit-card-number label {
+  margin-left:40px;
+  font-size: 11px;
+  line-height: 11px;
+  color: #333;
+}
+
+.credit-card-info {
+  margin: 10px 0;
+}
+
+.credit-card-info td.first {
+  width: 280px;
+}
+
+.credit-card-info .expiration-date .last {
+  white-space: nowrap;
+}
+
+.credit-card-info table {
+  width: 100%;
+}
+
+.credit-card-info .expiration-date .fieldError {
+    width: 140px;
+    white-space: normal;
+}
+
+.credit-card-info table .fieldError {
+    width: 80px;
+    white-space: normal;
+}
+
+.credit-card-info .expiration-date .first, .credit-card-info .cvv-box td.first {
+  text-align: right;
+  padding-right: 7px;
+}
+
+.credit-card-info .cvv-box td.first {
+  font-size: 11px;
+  line-height: 18px;
+  color: #333;
+}
+
+.credit-card-info p.note {
+  margin-left: 0 !important;
+  width: auto;
+  text-align: right;
+  font-size: 11px;
+  font-family: Arial, Verdana, FreeSans, sans-serif;
+  margin: 0 !important;
+}
+
+.cvv-help {
+  position: relative;
+  width: 17px;
+  height: 17px;
+  display: block;
+  background: url('images/help.png');
+  font-size: 0;
+  text-indent: -9999px;
+  margin-left: 3px;
+}
+a.cvv-help:hover span {
+  display: block;
+  position: absolute;
+  height: 95px;
+  width: 156px;
+  right: -3px;
+  top: 20px;
+  z-index: 99;
+  font-size: 0;
+  text-indent: -9999px;
+  background: url('images/cvv-explaination.png') no-repeat;
+}
+
+.credit-card-info .creditcard-radio {
+  margin-top: 3px;
+}
+
+.creditcard-radio label.last {
+  margin-right: 5px !important;
+}
+
+form.formLayout tr.field-valid label {
+  display: inline-block;
+  background: url('images/valid.png') left center no-repeat;
+  line-height: 20px;
+  padding-left: 18px;
+}
+
+form.formLayout .cvv-box tr.field-valid label {
+  line-height: 18px;
+}
+
+.payment-instruction-block.access-codes {
+  margin: 15px auto 5px auto !important;
+}
+
+#phone1, #phone2, #phone3 {
+  font-family: monospace;
+}
+
+#method-loading {
+  height: 300px;
+  background: url('images/preload.gif') no-repeat center center;
+}
+
+#country-loading {
+  display: block;
+  float: left;
+  background: transparent url('images/country-loader.gif') center center no-repeat;
+  margin-right: 10px;
+  padding-right: 8px;
+}
+
+.form-error {
+  text-align: center;
+  color: #E05921;
+}
+
+.iexplore6 #worldwide select {
+    margin-top: 5px;
+}
